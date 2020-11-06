@@ -19,7 +19,7 @@ def upload_file():
     	file = request.files['file']
     	filename = secure_filename(file.filename)
     	fileextension = filename.rsplit('.',1)[1]
-        Randomfilename = 'image'
+        Randomfilename ='image'
         filename = Randomfilename + '.' + fileextension
         try:
             blob_service.create_blob_from_stream(container, filename, file)
